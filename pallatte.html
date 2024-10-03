@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha256-/ijcOLwFf26xEYAjW75FizKVo5tnTYiQddPZoLUHHZ8=" crossorigin="anonymous"></script>
+    <title>Complete Color Palette</title>
+    
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+      }
+  
+      .color-swatch {
+        width: 150px;
+        padding: 2rem 1rem;
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+        position: relative;
+        cursor: pointer;
+      }
+  
+      .color-swatch::before {
+        content: attr(data-name);
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        font-size: 0.8rem;
+        color: rgba(0,0,0,0.6);
+      }
+  
+      .color-swatch::after {
+        content: attr(data-hex);
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.8rem;
+      }
+      
+      .tooltip {
+        background-color: black;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <!-- Info Colors -->
+    <div class="color-swatch" style="background-color: #326dee" data-name="color-info" data-hex="#326dee"></div>
+    <div class="color-swatch" style="background-color: #538cd8" data-name="color-info-light-20" data-hex="#538cd8"></div>
+    <div class="color-swatch" style="background-color: #a2c0f3" data-name="color-info-light-60" data-hex="#a2c0f3"></div>
+    <div class="color-swatch" style="background-color: #d0e2fb" data-name="color-info-light-80" data-hex="#d0e2fb"></div>
+    <div class="color-swatch" style="background-color: #2654b1" data-name="color-info-dark-20" data-hex="#2654b1"></div>
+    <div class="color-swatch" style="background-color: #193e83" data-name="color-info-dark-40" data-hex="#193e83"></div>
+    <div class="color-swatch" style="background-color: #0f2855" data-name="color-info-dark-60" data-hex="#0f2855"></div>
+    <div class="color-swatch" style="background-color: #051227" data-name="color-info-dark-80" data-hex="#051227"></div>
+  
+    <!-- Success Colors -->
+    <div class="color-swatch" style="background-color: #1ac888" data-name="color-success" data-hex="#1ac888"></div>
+    <div class="color-swatch" style="background-color: #42d7a6" data-name="color-success-light-20" data-hex="#42d7a6"></div>
+    <div class="color-swatch" style="background-color: #95ebd8" data-name="color-success-light-60" data-hex="#95ebd8"></div>
+    <div class="color-swatch" style="background-color: #d1f7ed" data-name="color-success-light-80" data-hex="#d1f7ed"></div>
+    <div class="color-swatch" style="background-color: #15a370" data-name="color-success-dark-20" data-hex="#15a370"></div>
+    <div class="color-swatch" style="background-color: #107d58" data-name="color-success-dark-40" data-hex="#107d58"></div>
+    <div class="color-swatch" style="background-color: #0b563f" data-name="color-success-dark-60" data-hex="#0b563f"></div>
+    <div class="color-swatch" style="background-color: #062f26" data-name="color-success-dark-80" data-hex="#062f26"></div>
+  
+    <!-- Warn Colors -->
+    <div class="color-swatch" style="background-color: #f6c31c" data-name="color-warn" data-hex="#f6c31c"></div>
+    <div class="color-swatch" style="background-color: #f8d34b" data-name="color-warn-light-20" data-hex="#f8d34b"></div>
+    <div class="color-swatch" style="background-color: #fbe399" data-name="color-warn-light-40" data-hex="#fbe399"></div>
+    <div class="color-swatch" style="background-color: #fdf7d6" data-name="color-warn-light-80" data-hex="#fdf7d6"></div>
+    <div class="color-swatch" style="background-color: #d9a716" data-name="color-warn-dark-20" data-hex="#d9a716"></div>
+    <div class="color-swatch" style="background-color: #ad810f" data-name="color-warn-dark-40" data-hex="#ad810f"></div>
+    <div class="color-swatch" style="background-color: #815b08" data-name="color-warn-dark-60" data-hex="#815b08"></div>
+    <div class="color-swatch" style="background-color: #553501" data-name="color-warn-dark-80" data-hex="#553501"></div>
+  
+    <!-- Error Colors -->
+    <div class="color-swatch" style="background-color: #d32752" data-name="color-error" data-hex="#d32752"></div>
+    <div class="color-swatch" style="background-color: #df527b" data-name="color-error-light-10" data-hex="#df527b"></div>
+    <div class="color-swatch" style="background-color: #f2a4b8" data-name="color-error-light-60" data-hex="#f2a4b8"></div> 
+    <div class="color-swatch" style="background-color: #f7d7df" data-name="color-error-light-80" data-hex="#f7d7df"></div> 
+    <div class="color-swatch" style="background-color: #a91e42" data-name="color-error-dark-20" data-hex="#a91e42"></div>
+    <div class="color-swatch" style="background-color: #7f1631" data-name="color-error-dark-40" data-hex="#7f1631"></div>
+    <div class="color-swatch" style="background-color: #550d21" data-name="color-error-dark-60" data-hex="#550d21"></div>
+    <div class="color-swatch" style="background-color: #2b0610" data-name="color-error-dark-80" data-hex="#2b0610"></div>
+  
+    <!-- Primary Colors -->
+    <div class="color-swatch" style="background-color: #673ab7" data-name="color-primary" data-hex="#673ab7"></div>
+    <div class="color-swatch" style="background-color: #815ac1" data-name="color-primary-light-10" data-hex="#815ac1"></div>
+    <div class="color-swatch" style="background-color: #b39ddb" data-name="color-primary-light-60" data-hex="#b39ddb"></div>
+    <div class="color-swatch" style="background-color: #d9c7ee" data-name="color-primary-light-80" data-hex="#d9c7ee"></div>
+    <div class="color-swatch" style="background-color: #502ea8" data-name="color-primary-dark-20" data-hex="#502ea8"></div>
+    <div class="color-swatch" style="background-color: #3b2280" data-name="color-primary-dark-40" data-hex="#3b2280"></div>
+    <div class="color-swatch" style="background-color: #261658" data-name="color-primary-dark-60" data-hex="#261658"></div>
+    <div class="color-swatch" style="background-color: #110a2f" data-name="color-primary-dark-80" data-hex="#110a2f"></div>
+  
+    <!-- Secondary Colors -->
+    <div class="color-swatch" style="background-color: #e68b00" data-name="color-secondary" data-hex="#e68b00"></div>
+    <div class="color-swatch" style="background-color: #eebc33" data-name="color-secondary-light-10" data-hex="#eebc33"></div>
+    <div class="color-swatch" style="background-color: #f9de8d" data-name="color-secondary-light-60" data-hex="#f9de8d"></div>
+    <div class="color-swatch" style="background-color: #fdf5d6" data-name="color-secondary-light-80" data-hex="#fdf5d6"></div>
+    <div class="color-swatch" style="background-color: #b86c00" data-name="color-secondary-dark-20" data-hex="#b86c00"></div>
+    <div class="color-swatch" style="background-color: #8f5500" data-name="color-secondary-dark-40" data-hex="#8f5500"></div>
+    <div class="color-swatch" style="background-color: #663d00" data-name="color-secondary-dark-60" data-hex="#663d00"></div>
+    <div class="color-swatch" style="background-color: #3d2500" data-name="color-secondary-dark-80" data-hex="#3d2500"></div>
+  
+    <!-- Tertiary Colors -->
+    <div class="color-swatch" style="background-color: #9e9e9e" data-name="color-tertiary" data-hex="#9e9e9e"></div>
+    <div class="color-swatch" style="background-color: #b4b4b4" data-name="color-tertiary-light-10" data-hex="#b4b4b4"></div>
+    <div class="color-swatch" style="background-color: #d5d5d5" data-name="color-tertiary-light-60" data-hex="#d5d5d5"></div>
+    <div class="color-swatch" style="background-color: #e9e9e9" data-name="color-tertiary-light-80" data-hex="#e9e9e9"></div>
+    <div class="color-swatch" style="background-color: #787878" data-name="color-tertiary-dark-20" data-hex="#787878"></div>
+    <div class="color-swatch" style="background-color: #5a5a5a" data-name="color-tertiary-dark-40" data-hex="#5a5a5a"></div>
+    <div class="color-swatch" style="background-color: #3c3c3c" data-name="color-tertiary-dark-60" data-hex="#3c3c3c"></div>
+    <div class="color-swatch" style="background-color: #1f1f1f" data-name="color-tertiary-dark-80" data-hex="#1f1f1f"></div>
+    
+    <div id="tooltip" class="tooltip" role="tooltip" style="display: none;">copied!</div>
+    
+    <script>
+    const colorSwatches = document.querySelectorAll('.color-swatch')
+    const tooltip = document.getElementById('tooltip')
+
+    colorSwatches.forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        const color_name = swatch.dataset.name
+        navigator.clipboard.writeText("--" + color_name)
+          .then(() => {
+            const popperInstance = new Popper(swatch, tooltip, {
+              modifiers: [
+                {
+                  name: 'offset',
+                  options: {
+                    offset: [10, 10],
+                  },
+                },
+              ],
+            })
+            tooltip.style.display = 'block'
+            popperInstance.update()
+            setTimeout(() => {
+                tooltip.style.display = 'none'
+                popperInstance.destroy()
+              }, 1000)
+            })
+          .catch((error) => {
+            console.error(`[error][failed] copy: ${error}`)
+          })
+      })
+    })
+    </script>
+  </body>
+</html>
